@@ -7,12 +7,12 @@ function Overview(props) {
     <>
       {tasks.map((task, index) => {
         return (
-          <>
-            <p key={index}>
+          <div key={index}>
+            <p>
               #{index + 1} {task}
             </p>
-            <button onClick={removeTask}>Delete Task</button>
-          </>
+            <button onClick={() => removeTask(index)} className="btn btn-danger">Delete Task</button>
+          </div>
         );
       })}
     </>

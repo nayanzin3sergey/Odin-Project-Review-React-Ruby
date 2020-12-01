@@ -15,10 +15,9 @@ function App() {
     setTask("");
   }
 
-  function removeTask(v) {
-      setTasks(prevState => prevState.filter(( item ) => item !== v));
+  function removeTask(itemIndex) {
+    setTasks(prevState => prevState.filter((_, index) => index !== itemIndex));
   }
-
 
   return (
     <div className="col-6 mx-auto mt-5">
